@@ -1,0 +1,67 @@
+## id false为绝对位置起飞，x y z绝对起飞位置，true为相对位置起飞，h相对起飞高度
+take_off:
+  id: true
+  x: 0.0
+  y: 0.0
+  z: 5.0
+  h: 5.0
+
+## 集结位置
+assemble:
+  x: 0.0
+  y: -20.0
+  z: 5.0
+  
+## 追踪的相机坐标，X+前，Y+左，Z+上，若为debug模式则为速度控制模式，否则为追踪
+tracking:
+  debug: false #true为调试模式, x, y, z对应期望速度
+  saved_file_path: "/home/ld/px4_ws/src/px4_application/"
+  #x: 0.5
+  #y: 0.5
+  #z: 0.0
+  x: 4.0
+  y: 0.0
+  z: -0.5
+  yaw: 0.0
+## 追踪的阈值
+threshold:
+  x: 0.1
+  y: 0.1
+  z: 0.1
+## 追踪的参数
+pid_xy:
+  tracking:
+    kp: 1.0
+    ki: 0.0
+    kd: 0.0
+    ff: 0.0
+    error_max: 5.0
+    integral_max: 2.0
+    output_max: 4.0
+pid_z:
+  tracking:
+    kp: 1.0
+    ki: 0.0
+    kd: 0.0
+    ff: 0.0
+    error_max: 3.0
+    integral_max: 2.0
+    output_max: 2.0
+
+## 返航位置
+home:
+  x: 0.0
+  y: 0.0
+  z: 5.0
+
+## 降落位置
+landing:
+  x: 0.0
+  y: 0.0
+  vz: -0.5 #降落速度
+
+## 到点范围
+range:
+  x: 0.1
+  y: 0.1
+  z: 0.1
